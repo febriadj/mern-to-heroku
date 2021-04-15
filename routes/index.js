@@ -7,5 +7,6 @@ const controllers = new TodoControllers()
 
 router.get('/todo', controllers.todoGet)
 router.post('/todo', controllers.todoPost)
+router.delete('/todo/:id', controllers.todoDelete)
 
 module.exports = router
