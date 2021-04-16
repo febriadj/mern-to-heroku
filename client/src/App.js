@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import './layouts/styles.css'
+
 import FormInput from './components/FormInput'
 import TableList from './components/TableList'
 
@@ -77,15 +79,17 @@ export default function App() {
           inputSubmit={ (event) => handleSubmit(event) }
           valueForm={ uploadTodo }
         />
-        { 
-          todolist.map((result, index) => {
-            return <TableList 
-              key={ index }
-              result={ result }
-              deleteTodo={ (event) => handleDelete(event) }
-            />
-          })
-        }
+        <div className="list">
+          { 
+            todolist.map((result, index) => {
+              return <TableList 
+                key={ index }
+                result={ result }
+                deleteTodo={ (event) => handleDelete(event) }
+              />
+            })
+          }
+        </div>
       </div>
     </div>
   )
