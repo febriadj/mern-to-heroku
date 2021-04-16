@@ -1,4 +1,6 @@
 .env
 client.rest
 
+client/src/layouts/styles.css
+client/src/layouts/styles.css.map
 node_modules/
