@@ -1,10 +1,8 @@
 'use strict'
 
-const 
-  mongoose = require('mongoose')
-, uri = process.env.MONGO_URI || 'mongodb://localhost:27017/projects'
+const mongoose = require('mongoose')
 
-const runMongo = async function() {
+const runMongo = async function(uri) {
   const options = {
     useUnifiedTopology: true,
     useNewUrlParser: true,
@@ -12,7 +10,8 @@ const runMongo = async function() {
   }
 
   try {
-    const db = await mongoose.connect(uri, options)
+    const mongouri = uri || 'mongodb://localhost:27017/projects'
+    const db = await mongoose.connect(mongouri, options)
 
     console.log('mongodb connected')
     return db

@@ -26,12 +26,13 @@ app.use('/api', require('./routes/index'))
 if (process.env.NODE_ENV == 'production') {
 	app.use(express.static('client/build'))
 
-	app.use((req, res, next) => {
-		res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+	app.get('*', (req, res, next) => {
+		res.sendFile(path.join(__dirname, '/client', '/build', 'index.html'))
 	})
 }
 
-runMongo() // menjalankan koneksi mongodb
+const uri = process.env.MONGO_URI
+runMongo(uri) // menjalankan koneksi mongodb
 
 app.listen(port)
 console.log('server running on port:' + port)

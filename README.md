@@ -1,2 +1,5 @@
-# MERN To Heroku
-Testing deployment aplikasi todo list sederhana berbasis MERN Stack ke Heroku cloud dan menghubungkannya ke repo Github
+~~~
+- MERN To Heroku
+
+Testing deployment aplikasi to-do list menggunakan stack teknologi mern ke heroku cloud
+~~~
