@@ -10,7 +10,7 @@ export default function App() {
 
   async function showTodo() {
     try {
-      const response = await fetch('http://localhost:8080/api/todo', {
+      const response = await fetch('/api/todo', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
       })
@@ -52,6 +52,23 @@ export default function App() {
     }
   }
 
+  async function handleDelete(event) {
+    try {
+      const response = await fetch('/api/todo/' + event.target.value, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' }
+      })
+
+      if (!response.ok) throw new Error('kesalahan saat menghapus todo')
+
+      showTodo()
+      return response
+    }
+    catch(err) {
+      console.error(err)
+    }
+  }
+
   return (
     <div className="todoapp">
       <div className="todoapp-wrap">
@@ -65,6 +82,7 @@ export default function App() {
             return <TableList 
               key={ index }
               result={ result }
+              deleteTodo={ (event) => handleDelete(event) }
             />
           })
         }
