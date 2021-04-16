@@ -11,6 +11,7 @@ const // local module
 , port = process.env.PORT || 8080
 
 dotenv.config({ path: './.env' }) // konfigurasi environment variables
+app.use(cors())
 
 // middleware express
 app.use(express.urlencoded({ extended: false }))
