@@ -11,12 +11,12 @@ function TableList({ result, deleteTodo }) {
   }
 
   return (
-    <div className="list">
-      <div className="list-info">
+    <div className="card">
+      <div className="card-info">
         <h2 className="title">{ result.title }</h2>
         <p className="created-at">{ created() }</p>
       </div>
-      <div className="list-action">
+      <div className="card-action">
         <button
           className="fas fa-trash"
           value={ result._id }
