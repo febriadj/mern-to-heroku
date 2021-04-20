@@ -58,6 +58,7 @@ body {
       }
     }
     .list {
+      width: 400px;
       display: grid; grid-template-columns: 1fr; gap: 10px;
       .card {
         display: flex; justify-content: space-between; align-items: center;

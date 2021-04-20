@@ -70,6 +70,7 @@ body {
   color: #111;
 }
 .todoapp .todoapp-wrap .list {
+  width: 400px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
