@@ -21,10 +21,10 @@ body {
   padding: 60px 0;
 }
 .todoapp .todoapp-wrap {
+  width: 450px;
   margin: 0 20px;
 }
 .todoapp .todoapp-wrap .form-input {
-  width: 400px;
   padding: 20px;
   background-color: #f8f8f8;
   margin: 0 0 20px 0;
@@ -40,7 +40,7 @@ body {
   outline: none;
   border-bottom: 1px solid #111;
   border-radius: 0;
-  padding: 15px 80px 15px 0;
+  padding: 15px 70px 15px 0;
   background-color: transparent;
   font-family: "Roboto Mono", sans-serif;
   font-size: 15px;
@@ -70,7 +70,6 @@ body {
   color: #111;
 }
 .todoapp .todoapp-wrap .list {
-  width: 400px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
@@ -81,6 +80,9 @@ body {
   align-items: center;
   padding: 20px;
   background-color: #f8f8f8;
+}
+.todoapp .todoapp-wrap .list .card .card-info {
+  margin: 0 30px 0 0;
 }
 .todoapp .todoapp-wrap .list .card .card-info .created-at {
   margin: 8px 0 0 0;
