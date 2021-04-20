@@ -6,7 +6,7 @@ function FormInput({ inputChange, inputSubmit, valueForm }) {
       <div className="input-action">
         <input 
           name="title" 
-          placeholder="Apa Judul Kegiatannya?"
+          placeholder="Ingin Melakukan Apa?"
           onChange={ inputChange }
           value={ valueForm.title }
         />
